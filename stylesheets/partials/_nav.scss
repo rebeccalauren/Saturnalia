@@ -1,0 +1,55 @@
+body.indexBackground {
+	font: normal 14px "Libre Baskerville", serif;
+	 background-image: url("images/backgroundImage.jpg");
+	 background-size: cover;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.nav-sub {
+	display: none;
+	position: absolute;
+}
+.nav-main {
+	/*li's that are direct descendancts of .nav*/
+	> li {
+		float: right;
+		border: 1px solid #cccccc;
+
+		/*&:first-child {
+			border-right-style: none;
+		}*/
+	}
+	/*All li's within .nav-main*/
+	li {
+		a{
+			color: #cccccc;
+			background-color: black;
+			padding: 14px 20px;
+			display: block;
+			text-decoration: none;
+
+		&:hover {
+			background-color: #999;
+			color: black;
+		}
+	}
+&:hover {
+		.nav-sub {
+				display: block;
+			}
+		}
+	}
+}
+.fancy {
+	font-family:"Satisfy", cursive;
+	color: #cccccc;
+	font-size: 24px;
+	float:left;
+	margin-top: 15px;
+	margin-left: 40px
+}
+
