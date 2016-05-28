@@ -1,9 +1,11 @@
+@import "partials/variables";
 @import "partials/nav";
 @import "partials/bookAnimation";
 
 body {
 	background-color: #b3b3b3;
 	height: 100%;
+	margin: 0px;
 }
 ul {
 	margin: 0;
@@ -11,19 +13,127 @@ ul {
 	list-style: none;
 }
 
-/*#behindTheirWords {
-	font-family: 'Homemade Apple', cursive;
-	font-size: 50px;
-	color: #cccccc;
-	text-align: right;
+%backgroundCover {
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
-#centerTitle{
-	margin-top: 100px;
-	clear: all;
-	position: relative;
-}*/
+.firstSection {
+	@extend %backgroundCover;
+	background-image: url("images/backgroundImage.jpg");
+}
 
+#behindTheirWords {
+	font-family: $font-bigCursive;
+	font-size: 50px;
+	color: #cccccc;
+	text-align: left;
+	margin: 0px;
+	position: absolute;
+	top: 200px;
+	left: 30px;
+}
+
+#behindTheirWordsSub {
+	@extend #behindTheirWords;
+	font-size: 20px;
+	top: 300px;
+	left: 70px;
+}
+
+#centerTitle {
+	clear: all;
+	height: 700px;
+	position: relative;
+	top: 100px;
+}
+
+.secondSection {
+	@extend %backgroundCover;
+	background-color: $grayColor;
+}
+
+%column {
+	width: 50%;
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+
+.columnLeft {
+	@extend %column;
+	float: left;
+}
+
+.columnRight {
+	@extend %column;
+	float: right;
+}
+
+.authorPic {
+	display: block;
+	width: 30%;
+	margin: 0 auto;
+	top: 50%;
+}
+
+#leftFirstBox, #leftSecondBox, #leftThirdBox, #rightFirstBox, #rightSecondBox, #rightThirdBox {
+	height: 300px;
+	border: 1px solid black;
+}
+
+.thirdSection {
+	@extend %backgroundCover;
+	height: 700px;
+	position: relative;
+	width: 100%;
+	background-image: url("images/brochures.jpg");
+	opacity: .75;
+	float: left;
+}
+
+#thirdText {
+	font-family: $font-secondaryCursive;
+	font-size: 30px;
+	text-align: center;
+	opacity: 1;
+	line-height: 50%;
+}
+#thirdText2{
+	font-family: $font-secondaryCursive;
+	font-size: 20px;
+	text-align: right;
+	opacity: 1;
+	line-height: 50%;
+	position: relative;
+	right: 20px;
+}
+
+#rightJustifiedBox {
+	background-color: $grayColor;
+	width: 40%;
+	float:right;
+	position: relative;
+/*If time, write jquery so this appears exactly 1/3 down the div*/
+	top: 200px;
+	right: 20px;
+	border: 10px solid black;
+	border-radius: 25px;
+}
+.fourthSection {
+	@extend %backgroundCover;
+}
+
+.fifthSection {
+	@extend %backgroundCover;
+}
+
+#socialMediaText {
+	text-align: center;
+	font-family: $font-bigCursive;
+	font-size: 20px;
+}
+
+/*This is what you had for blog.html to format the columns. You may be able to combine it with the columns on index.html
 .col-left {
 	width: 50%;
 	float: left;
@@ -32,7 +142,7 @@ ul {
 .col-right {
 	width: 50%;
 	float: right;
-}
+}*/
 #authorBio {
 	width: 100px;
 	float: right;
