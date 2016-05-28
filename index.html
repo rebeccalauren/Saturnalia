@@ -7,9 +7,9 @@
 		<link rel="stylesheet" href="stylesheets/main.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
 		<script src="js/main.js"></script>
-		<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div class="firstSection">
@@ -17,22 +17,23 @@
 		<p class="fancy">Saturnalia Books</p>
 		<nav>
 			<ul class="nav-main">
-				<li><a href="#">About Us</a>
-					<ul class="nav-sub"> 
-						<li><a href="#">Our Staff</a></li>      
-						<li><a href="http://saturnaliabooks.com/">Saturnalia Books</a></li>   
-						<li><a href="#">Contact</a></li>
-					</ul>
-				</li>
-				<li><a href="blog.html">Blog</a>
+				<li>
+					<!-- By puttling the li close and open tags next to each other like this, it removed the space between the inline block elements. -->
+					<a href="blog.html">Blog</a></li><li>
 					<!-- Maybe add in sub-menus of each author.
 					<ul class="nav-sub">       
 					<li><a href="#">Item 1</a></li>         
 					<li><a href="#">Item 2</a></li>
 					<li><a href="#">Item 3</a></li>
 				</ul> -->
-				</li>
-				<li><a href="index.html">Home</a></li>
+				<a href="#">About Us</a>
+					<ul class="nav-sub"> 
+						<li><a href="#">Our Staff</a></li>      
+						<li><a href="http://saturnaliabooks.com/">Saturnalia Books</a></li>   
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</li><li>
+				<a href="index.html">Home</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -75,12 +76,25 @@
 		</div>
 	</div>
 	<div class="fourthSection">
-		<div id="submit"></div>
-		<div id="donate"</div>
-		<div id="events"</div>
+		<div class="buttonStuff">
+			<button class="buttonLink">Submit</button>
+				<p>Our contest generally runs from February through April each year.</p>
+		</div>
+		<div class="buttonStuff" id="middleButton">
+			<button class="buttonLink">Donate</button>
+				<p>Saturnalia books' is non-profit organization under section 501(c)(3). All contributions are tax deductible under section 170.</p>
+		</div>
+		<div class="buttonStuff">
+			<button class="buttonLink">Events</button>
+				<p>Saturnalia Books: Around town and elsewhere!</p>
+		</div>
 	</div>
 	<div class="fifthSection">
-		<p id="socialMediaText">Find us on social media</p>
+			<p id="socialMediaText">Find us on social media<p>
+			<p id="socialMediaText">
+				<i class="fa fa-facebook-official fa-2x"></i>
+				<i class="fa fa-twitter-square fa-2x"></i>
+			</p>
 	<!-- 	Facebook icon, Twitter icon -->
 </div>
 </body>

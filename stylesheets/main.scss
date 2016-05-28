@@ -1,6 +1,7 @@
 @import "partials/variables";
 @import "partials/nav";
 @import "partials/bookAnimation";
+@import "font-awesome/font-awesome";
 
 body {
 	background-color: #b3b3b3;
@@ -16,8 +17,14 @@ ul {
 %backgroundCover {
 	background-size: cover;
 	background-repeat: no-repeat;
+	height: 700px;
 }
 
+@mixin floatMe($float) {
+         position: relative;
+         float: $float;
+}
+/*First section of website: big background image, nav bar.*/
 .firstSection {
 	@extend %backgroundCover;
 	background-image: url("images/backgroundImage.jpg");
@@ -48,9 +55,11 @@ ul {
 	top: 100px;
 }
 
+/*Second section of website: author photos and blog teasers.*/
 .secondSection {
 	@extend %backgroundCover;
 	background-color: $grayColor;
+	height: 900px;
 }
 
 %column {
@@ -61,12 +70,12 @@ ul {
 
 .columnLeft {
 	@extend %column;
-	float: left;
+	@include floatMe(left);
 }
 
 .columnRight {
 	@extend %column;
-	float: right;
+	@include floatMe(right);
 }
 
 .authorPic {
@@ -81,68 +90,105 @@ ul {
 	border: 1px solid black;
 }
 
+/*Third section of website: news and links*/
 .thirdSection {
 	@extend %backgroundCover;
+	@include floatMe(left);
 	height: 700px;
-	position: relative;
 	width: 100%;
-	background-image: url("images/brochures.jpg");
-	opacity: .75;
-	float: left;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+      ),
+	url(images/brochures.jpg);
 }
 
 #thirdText {
 	font-family: $font-secondaryCursive;
 	font-size: 30px;
 	text-align: center;
-	opacity: 1;
 	line-height: 50%;
-}
-#thirdText2{
-	font-family: $font-secondaryCursive;
-	font-size: 20px;
-	text-align: right;
-	opacity: 1;
-	line-height: 50%;
-	position: relative;
-	right: 20px;
 }
 
-#rightJustifiedBox {
-	background-color: $grayColor;
-	width: 40%;
-	float:right;
+#thirdText2{
+	@extend #thirdText;
+	font-size: 20px;
+	text-align: right;
 	position: relative;
-/*If time, write jquery so this appears exactly 1/3 down the div*/
-	top: 200px;
+	right: 25%;
+}
+
+
+#rightJustifiedBox {
+	@include floatMe(right);
+	background-color: $grayColor;
+	width: 30%;
+	top: 20%;
 	right: 20px;
 	border: 10px solid black;
 	border-radius: 25px;
 }
+
+/*Fourth section of website: buttons to get involved*/
 .fourthSection {
 	@extend %backgroundCover;
+	@include floatMe(left);
+	height: 250px;
+	width: 100%;
 }
 
+.buttonStuff {
+	@include floatMe(left);
+	display: inline-block;
+	width: 25%;
+	margin: 4.167%;
+	text-align: center;
+}
+
+.buttonLink {
+    transition-duration: 0.4s;
+    background-color: $grayColor;
+    border-radius: 25px;
+    padding: 10px 24px;
+    font-family: $font-bigCursive;
+    font-size: 30px;
+}
+
+.buttonLink:hover {
+    background-color: blue;
+    color: white;
+}
+
+/*.buttonLink {
+	@include floatMe(left);
+	margin: 50px;
+}*/
+
+/*Fifth section of website: social media*/
 .fifthSection {
 	@extend %backgroundCover;
+	@include floatMe(left);
+	height: 900px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+      ),
+	url(images/bike.jpg);
+	clear: left;
+	width: 100%;
 }
 
 #socialMediaText {
 	text-align: center;
 	font-family: $font-bigCursive;
-	font-size: 20px;
+	font-size: 30px;
+	color: white;
+	position: relative;
+	top: 40%;
+	line-height: 20%;
+	margin: 0;
 }
 
-/*This is what you had for blog.html to format the columns. You may be able to combine it with the columns on index.html
-.col-left {
-	width: 50%;
-	float: left;
-}
+/*Book info -- add to separate partial?*/
 
-.col-right {
-	width: 50%;
-	float: right;
-}*/
 #authorBio {
 	width: 100px;
 	float: right;
