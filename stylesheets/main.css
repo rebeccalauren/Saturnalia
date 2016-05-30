@@ -35,11 +35,130 @@ nav {
 .fancy {
   font-family: "Satisfy", cursive;
   color: #cccccc;
-  font-size: 24px;
   float: left;
-  margin-top: 15px;
-  margin-left: 40px; }
+  margin: 0; }
+  .fancy a {
+    color: #cccccc;
+    background-color: black;
+    padding: 14px 20px;
+    display: block;
+    text-decoration: none;
+    border: 1px solid #cccccc; }
+  .fancy:hover a {
+    background-color: #999;
+    color: black; }
 
+#authorBio {
+  width: 100px;
+  float: right; }
+
+.align {
+  clear: both;
+  margin-top: 90px;
+  /*	width: 50%;*/
+  max-width: 1170px;
+  text-align: center;
+  float: left; }
+
+.align > li {
+  min-height: 300px;
+  display: inline-block;
+  margin: 30px 20px 30px 30px;
+  padding: 0 0 0 60px;
+  vertical-align: top; }
+
+.book {
+  position: relative;
+  width: 160px;
+  height: 220px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+.poem, .iframe {
+  visibility: hidden; }
+
+#poemTitle {
+  margin-top: 30px;
+  font-size: 8px; }
+
+#authorNameInside {
+  font-size: 6px; }
+
+#authorNameOutside {
+  font-size: 16px; }
+
+.authorPhoto {
+  float: right;
+  margin: 20px; }
+
+.coverDesign {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.coverDesign::after {
+  background-image: -webkit-linear-gradient(-135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+  background-image: -moz-linear-gradient(-135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+  background-image: linear-gradient(-135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+figcaption {
+  /*Adding border to see where this section actually lives.*/
+  border: 10px;
+  padding-left: 40px;
+  text-align: left;
+  /*float: right;*/
+  margin-top: 90px;
+  left: 160px;
+  width: 310px;
+  -webkit-backface-visibility: hidden; }
+
+figcaption h1 {
+  margin: 0; }
+
+figcaption span {
+  color: #16a085;
+  padding: 0.6em 0 1em 0;
+  display: block; }
+
+figcaption p {
+  color: #63707d;
+  line-height: 1.3; }
+
+/* Media Queries */
+@media screen and (max-width: 37.8125em) {
+  .align > li {
+    width: 100%;
+    min-height: 440px;
+    height: auto;
+    padding: 0;
+    margin: 0 0 30px 0; }
+
+  .book {
+    margin: 0 auto; }
+
+  figcaption {
+    text-align: center;
+    width: 320px;
+    top: 250px;
+    padding-left: 0;
+    left: -80px;
+    font-size: 90%; } }
 .hardcover_front li:first-child {
   background-color: #eee;
   -webkit-backface-visibility: hidden;
@@ -2632,11 +2751,15 @@ ul {
 .firstSection, .secondSection, .thirdSection, .fourthSection, .fifthSection {
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px; }
+  /*	height: 700px;*/ }
 
+/*@mixin heightDiv($height){
+	height: $height;
+}*/
 /*First section of website: big background image, nav bar.*/
 .firstSection {
-  background-image: url("images/backgroundImage.jpg"); }
+  background-image: url("images/backgroundImage.jpg");
+  height: 700px; }
 
 #behindTheirWords, #behindTheirWordsSub {
   font-family: "Homemade Apple", cursive;
@@ -2662,11 +2785,10 @@ ul {
 /*Second section of website: author photos and blog teasers.*/
 .secondSection {
   background-color: #eeeeee;
-  height: 900px; }
+  /*	height: 900px;*/ }
 
 .columnLeft, .columnRight {
   width: 50%;
-  border: 1px solid black;
   box-sizing: border-box; }
 
 .columnLeft {
@@ -2679,12 +2801,12 @@ ul {
 
 .authorPic {
   display: block;
-  width: 30%;
-  margin: 0 auto;
-  top: 50%; }
+  width: 100%;
+  margin: 0 auto; }
 
-#leftFirstBox, #leftSecondBox, #leftThirdBox, #rightFirstBox, #rightSecondBox, #rightThirdBox {
-  height: 300px;
+#left1, #right1, #left2, #right2, #left3, #right3 {
+  position: relative;
+  float: left;
   border: 1px solid black; }
 
 /*Third section of website: news and links*/
@@ -2766,118 +2888,5 @@ ul {
   top: 40%;
   line-height: 20%;
   margin: 0; }
-
-/*Book info -- add to separate partial?*/
-#authorBio {
-  width: 100px;
-  float: right; }
-
-.align {
-  clear: both;
-  margin-top: 90px;
-  /*	width: 50%;*/
-  max-width: 1170px;
-  text-align: center;
-  float: left; }
-
-.align > li {
-  min-height: 300px;
-  display: inline-block;
-  margin: 30px 20px 30px 30px;
-  padding: 0 0 0 60px;
-  vertical-align: top; }
-
-.book {
-  position: relative;
-  width: 160px;
-  height: 220px;
-  -webkit-perspective: 1000px;
-  -moz-perspective: 1000px;
-  perspective: 1000px;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-.poem, .iframe {
-  visibility: hidden; }
-
-#poemTitle {
-  margin-top: 30px;
-  font-size: 8px; }
-
-#authorNameInside {
-  font-size: 6px; }
-
-#authorNameOutside {
-  font-size: 16px; }
-
-.authorPhoto {
-  float: right;
-  margin: 20px; }
-
-.coverDesign {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-  z-index: 1;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden; }
-
-.coverDesign::after {
-  background-image: -webkit-linear-gradient(-135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
-  background-image: -moz-linear-gradient(-135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
-  background-image: linear-gradient(-135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; }
-
-figcaption {
-  /*Adding border to see where this section actually lives.*/
-  border: 10px;
-  padding-left: 40px;
-  text-align: left;
-  /*float: right;*/
-  margin-top: 90px;
-  left: 160px;
-  width: 310px;
-  -webkit-backface-visibility: hidden; }
-
-figcaption h1 {
-  margin: 0; }
-
-figcaption span {
-  color: #16a085;
-  padding: 0.6em 0 1em 0;
-  display: block; }
-
-figcaption p {
-  color: #63707d;
-  line-height: 1.3; }
-
-/* Media Queries */
-@media screen and (max-width: 37.8125em) {
-  .align > li {
-    width: 100%;
-    min-height: 440px;
-    height: auto;
-    padding: 0;
-    margin: 0 0 30px 0; }
-
-  .book {
-    margin: 0 auto; }
-
-  figcaption {
-    text-align: center;
-    width: 320px;
-    top: 250px;
-    padding-left: 0;
-    left: -80px;
-    font-size: 90%; } }
 
 /*# sourceMappingURL=main.css.map */
