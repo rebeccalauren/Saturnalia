@@ -4,6 +4,9 @@
 @import "partials/bookAnimation";
 @import "font-awesome/font-awesome";
 
+
+* {box-sizing: border-box;}
+
 body {
 	background-color: #b3b3b3;
 	height: 100%;
@@ -22,12 +25,9 @@ ul {
 }
 
 @mixin floatMe($float) {
-         position: relative;
-         float: $float;
+    position: relative;
+    float: $float;
 }
-/*@mixin heightDiv($height){
-	height: $height;
-}*/
 
 /*First section of website: big background image, nav bar.*/
 .firstSection {
@@ -55,33 +55,47 @@ ul {
 }
 
 #centerTitle {
-	clear: all;
-	height: 700px;
+	clear: both;
 	position: relative;
 	top: 100px;
 }
+
+#arrowDown {
+	clear:  both;
+	color: white;
+	position: absolute;	
+	bottom: 0%;
+	text-align: center;
+	width: 100%;
+
+	i {
+		display: inline-block;
+		margin: 0 auto;
+	}
+}
+
 
 /*Second section of website: author photos and blog teasers.*/
 .secondSection {
 	@extend %backgroundCover;
 	background-color: $grayColor;
-/*	height: 900px;*/
 }
 
 %column {
 	width: 50%;
-	box-sizing: border-box;
 }
 
 .columnLeft {
 	@extend %column;
 	@include floatMe(left);
+/*	border-left: 50px solid black;*/
 }
 
 .columnRight {
 	@extend %column;
 	@include floatMe(right);
-}
+/*	border-right: 50px solid black;
+*/}
 
 .authorPic {
 	display: block;
@@ -91,7 +105,21 @@ ul {
 
 #left1, #right1, #left2, #right2, #left3, #right3 {
 	@include floatMe(left);
-	border: 1px solid black;
+	width: 100%;
+}
+
+.blogTitle {
+	font-family: $font-secondaryCursive;
+	font-size: 30px;
+	text-align: center;
+	margin: 10px;
+}
+.blogSubTitle {
+	@extend .blogTitle;
+	font-size: 20px;
+}
+.blogIntro {
+	margin: 30px;
 }
 
 /*Third section of website: news and links*/
@@ -130,6 +158,11 @@ ul {
 	right: 20px;
 	border: 10px solid black;
 	border-radius: 25px;
+}
+
+#arrowDown2 {
+	@extend #arrowDown;
+	color: black;
 }
 
 /*Fourth section of website: buttons to get involved*/

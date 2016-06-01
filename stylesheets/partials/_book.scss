@@ -1,16 +1,33 @@
-#authorBio {
-	width: 100px;
-	float: right;
+.col-left{
+	margin: 20px;
+	border: 1px solid black;
+	width: 50%;
+	float:left;
 }
 
-.align {
-	clear: both;
-	margin-top: 90px;
-/*	width: 50%;*/
-	max-width: 1170px;
-	text-align: center;
+.col-right{
+	width: 40%;
 	float: left;
+	position: relative;
+	left: 5px;
 }
+
+.blogContent {
+	margin-left: 20px;
+}
+.bookTitle {
+	text-align: center;
+	font-size: 30px;
+}
+.authorBio {
+	text-align: center;
+	font-size: 20px;
+}
+
+/*.align {
+	margin-top: 90px;
+	max-width: 1170px;
+}*/
 
 .align > li {
 	min-height: 300px;
