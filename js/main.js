@@ -33,26 +33,32 @@ $("#arrowDown2").on("click", function(){
 	$.scrollTo("#fourthSection", 800); 
 	});
 
-var offset = $(".nav-wrapper").outerHeight(true);
-		console.log(offset);
-		$("body").css("margin-top", offset);
-
-	$(".nav-main a").on("click", function(event){
-		event.preventDefault();
-		var pageToScrollTo = $(this).attr("href");
-		$(window).scrollTo(pageToScrollTo, 3000, {offset:-offset});
-	});
-});
- var offset = $(".nav-wrapper").outerHeight(true);
-		console.log(offset);
-		$("body").css("margin-top", offset);
+ 	var offset = $(".nav-wrapper").outerHeight(true);
+	console.log(offset);
+	$("body").css("margin-top", offset);
 
 	$(".nav-secondary a").on("click", function(event){
 		event.preventDefault();
 		var pageToScrollTo = $(this).attr("href");
 		$(window).scrollTo(pageToScrollTo, 3000, {offset:-offset});
 	});
-});
+
+	$(".nav-main a").on("click", function(event){
+		event.preventDefault();
+		var pageToScrollTo = $(this).attr("href");
+		$(window).scrollTo(pageToScrollTo, 3000, {offset:-offset});
+	});
+
+	$(".page").hover(
+	    function(){
+	       	$(".overlay").fadeIn()
+	   },
+	   function(){
+	   		$(".overlay").fadeOut() 
+	   }
+	);
+
+}); // closes doc.ready
 
 // $(".poem").hover(
 //        function(){ $("body").addClass("wholePageDarken")

@@ -403,10 +403,13 @@
 /*Below is where you make the poem page bigger.*/
 	transform: scale(3,3);
 	transition: .5s 1.0s;
+
 	>.poem {
 		transition: .5s .5s;
 		visibility: visible;
 		background-color: #fffbf6;
+		position: relative;
+		left-margin: 10px;
 	>p {
 		background-color: #fffbf6;
 		font-size: 5px;

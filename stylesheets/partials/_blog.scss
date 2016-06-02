@@ -11,12 +11,27 @@
 		}
 	}
 }*/
+body {
+	background-color: #b3b3b3;
+	height: 100%;
+	margin: 0px;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.8);
+}
+
 #blogBackground {
 	background-color: red;
 	background-image: -webkit-linear-gradient(left, #800000, black);
 	background-image: -moz-linear-gradient(left, #800000, black);
 	background-image: linear-gradient(to right, #800000, black);
 	height: 100%;
+	width: 100%;
 	margin: 0px;
 }
 .titleOfPage {
@@ -38,7 +53,7 @@
 	@extend .plainBlogTitle;
 	font-size: 20px;
 	right: 0px;
-	left: 100px;
+	margin-left: 200px;
 	margin-bottom: 20px;
 }
 
