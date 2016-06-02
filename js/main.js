@@ -43,8 +43,16 @@ var offset = $(".nav-wrapper").outerHeight(true);
 		$(window).scrollTo(pageToScrollTo, 3000, {offset:-offset});
 	});
 });
+ var offset = $(".nav-wrapper").outerHeight(true);
+		console.log(offset);
+		$("body").css("margin-top", offset);
 
- $("")
+	$(".nav-secondary a").on("click", function(event){
+		event.preventDefault();
+		var pageToScrollTo = $(this).attr("href");
+		$(window).scrollTo(pageToScrollTo, 3000, {offset:-offset});
+	});
+});
 
 // $(".poem").hover(
 //        function(){ $("body").addClass("wholePageDarken")

@@ -19,6 +19,8 @@ nav {
   /*All li's within .nav-main*/ }
   nav .nav-main > li {
     display: inline-block; }
+  nav .nav-secondary > li {
+    display: inline-block; }
   nav li a {
     color: #cccccc;
     background-color: black;
@@ -50,20 +52,39 @@ nav {
 		}
 	}
 }*/
-.col-left {
-  margin: 20px;
-  border: 1px solid black;
-  width: 50%;
-  float: left; }
+#blogBackground {
+  background-color: red;
+  background-image: -webkit-linear-gradient(left, #800000, black);
+  background-image: -moz-linear-gradient(left, #800000, black);
+  background-image: linear-gradient(to right, #800000, black);
+  height: 100%;
+  margin: 0px; }
 
-.col-right {
-  width: 40%;
-  float: left;
+.titleOfPage, .plainBlogTitle, .plainBlogSub {
+  clear: both;
+  font-family: "Homemade Apple", cursive;
+  text-align: center;
+  color: white;
+  position: relative; }
+
+.plainBlogTitle, .plainBlogSub {
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
   position: relative;
-  left: 5px; }
+  right: 100px; }
+
+.plainBlogSub {
+  font-size: 20px;
+  right: 0px;
+  left: 100px;
+  margin-bottom: 20px; }
 
 .blogContent {
   margin-left: 20px; }
+
+#lastBlog {
+  margin-bottom: 200px; }
 
 .bookTitle {
   text-align: center;
@@ -75,19 +96,31 @@ nav {
   text-align: center;
   font-size: 20px; }
 
-/*.align {
-	margin-top: 90px;
-	max-width: 1170px;
-}*/
+.mainBlog {
+  width: 80%;
+  background-color: #b3b3b3;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom: 2px solid #404040; }
+
+.authors1, .authors2 {
+  width: 20%;
+  float: right;
+  margin: 20px; }
+
+.authors2 {
+  float: left; }
+
 .align > li {
   min-height: 300px;
   display: inline-block;
   /*	margin: 30px 20px 30px 30px;
   	padding: 0 0 0 60px;*/
   vertical-align: top;
-  margin: 0;
+  margin-left: 10%;
+  margin-right: 10%;
   padding: 0;
-  float: left; }
+  float: right; }
 
 .book {
   position: relative;
@@ -181,6 +214,11 @@ figcaption p {
     padding-left: 0;
     left: -80px;
     font-size: 90%; } }
+#socialMedia {
+  height: 900px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/bike.jpg);
+  width: 80%; }
+
 .hardcover_front li:first-child {
   background-color: #eee;
   -webkit-backface-visibility: hidden;
@@ -2773,7 +2811,7 @@ ul {
   padding: 0;
   list-style: none; }
 
-#firstSection, #secondSection, #thirdSection, #fourthSection, #fifthSection {
+#socialMedia, #firstSection, #secondSection, #thirdSection, #fourthSection, #fifthSection {
   background-size: cover;
   background-repeat: no-repeat;
   /*	height: 700px;*/ }
@@ -2807,7 +2845,7 @@ ul {
   clear: both;
   color: white;
   position: absolute;
-  bottom: 0%;
+  bottom: 10%;
   text-align: center;
   width: 100%; }
   #arrowDown i, #arrowDown2 i {
@@ -2866,13 +2904,17 @@ ul {
   font-family: "Satisfy", cursive;
   font-size: 30px;
   text-align: center;
-  line-height: 50%; }
+  line-height: 50%;
+  color: black;
+  text-decoration: none; }
 
 #thirdText2 {
   font-size: 20px;
   text-align: right;
   position: relative;
-  right: 25%; }
+  right: 25%;
+  color: black;
+  text-decoration: none; }
 
 #rightJustifiedBox {
   position: relative;
@@ -2883,6 +2925,9 @@ ul {
   right: 20px;
   border: 10px solid black;
   border-radius: 25px; }
+  #rightJustifiedBox a {
+    color: black;
+    text-decoration: none; }
 
 #arrowDown2 {
   color: black; }

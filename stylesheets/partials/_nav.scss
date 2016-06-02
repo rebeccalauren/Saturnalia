@@ -24,6 +24,9 @@ nav {
 	.nav-main > li {
 				display: inline-block;
 		}
+	& .nav-secondary > li {
+				display:inline-block;
+	}
 	li {
 
 		a{
