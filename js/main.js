@@ -38,9 +38,14 @@ $("#arrowDown2").on("click", function(){
 	$("body").css("margin-top", offset);
 
 	$(".nav-secondary a").on("click", function(event){
-		event.preventDefault();
+		
 		var pageToScrollTo = $(this).attr("href");
+		if pageToScrollTo = index.html {
+		}
+		else {
+		event.preventDefault();
 		$(window).scrollTo(pageToScrollTo, 3000, {offset:-offset});
+		}
 	});
 
 	$(".nav-main a").on("click", function(event){
