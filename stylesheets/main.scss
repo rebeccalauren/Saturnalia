@@ -1,6 +1,6 @@
 @import "partials/variables";
 @import "partials/nav";
-@import "partials/book";
+@import "partials/blog";
 @import "partials/bookAnimation";
 @import "font-awesome/font-awesome";
 
@@ -30,7 +30,7 @@ ul {
 }
 
 /*First section of website: big background image, nav bar.*/
-.firstSection {
+#firstSection {
 	@extend %backgroundCover;
 	background-image: url("images/backgroundImage.jpg");
 	height: 700px;
@@ -76,7 +76,7 @@ ul {
 
 
 /*Second section of website: author photos and blog teasers.*/
-.secondSection {
+#secondSection {
 	@extend %backgroundCover;
 	background-color: $grayColor;
 }
@@ -123,7 +123,7 @@ ul {
 }
 
 /*Third section of website: news and links*/
-.thirdSection {
+#thirdSection {
 	@extend %backgroundCover;
 	@include floatMe(left);
 	height: 700px;
@@ -166,7 +166,7 @@ ul {
 }
 
 /*Fourth section of website: buttons to get involved*/
-.fourthSection {
+#fourthSection {
 	@extend %backgroundCover;
 	@include floatMe(left);
 	height: 250px;
@@ -183,11 +183,17 @@ ul {
 
 .buttonLink {
     transition-duration: 0.4s;
+    color: black;
     background-color: $grayColor;
     border-radius: 25px;
     padding: 10px 24px;
     font-family: $font-bigCursive;
     font-size: 30px;
+
+    	& a {
+		color: black;
+		text-decoration: none;
+}
 }
 
 .buttonLink:hover {
@@ -201,7 +207,7 @@ ul {
 }*/
 
 /*Fifth section of website: social media*/
-.fifthSection {
+#fifthSection {
 	@extend %backgroundCover;
 	@include floatMe(left);
 	height: 900px;
@@ -222,6 +228,12 @@ ul {
 	top: 40%;
 	line-height: 20%;
 	margin: 0;
+
+	& a{
+		text-decoration: none;
+		color: white;
+	}
+	& .fa:hover {
+    color: blue;
 }
-
-
+}
