@@ -37,15 +37,11 @@ $("#arrowDown2").on("click", function(){
 	console.log(offset);
 	$("body").css("margin-top", offset);
 
-	$(".nav-secondary a").on("click", function(event){
+	$(".nav-secondary a.jump").on("click", function(event){
 		
 		var pageToScrollTo = $(this).attr("href");
-		if pageToScrollTo = index.html {
-		}
-		else {
 		event.preventDefault();
 		$(window).scrollTo(pageToScrollTo, 3000, {offset:-offset});
-		}
 	});
 
 	$(".nav-main a").on("click", function(event){
