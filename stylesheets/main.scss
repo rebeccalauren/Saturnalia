@@ -46,22 +46,34 @@ ul {
 }
 
 #behindTheirWords {
+	color: white;
+	font-size: 30px;
+	@include breakpoint(medium){
 	font-family: $font-bigCursive;
-	font-size: 50px;
 	color: #cccccc;
 	text-align: left;
 	margin: 0px;
 	position: absolute;
 	top: 200px;
 	left: 30px;
+	font-size: 50px;
+	}
 }
 
 #behindTheirWordsSub {
-	@extend #behindTheirWords;
+	color: white;
 	font-size: 20px;
+	@include breakpoint(medium){
+	font-family: $font-bigCursive;
+	color: #cccccc;
+	text-align: left;
+	margin: 0px;
+	position: absolute;
 	top: 300px;
 	left: 70px;
+	}
 }
+
 
 #centerTitle {
 	clear: both;
@@ -91,7 +103,10 @@ ul {
 }
 
 %column {
+	width: 100%;
+	@include breakpoint(medium){
 	width: 50%;
+	}
 }
 
 .columnLeft {
@@ -118,14 +133,19 @@ ul {
 }
 
 .blogTitle {
-	font-family: $font-secondaryCursive;
 	font-size: 30px;
 	text-align: center;
 	margin: 10px;
+	@include breakpoint(medium){
+	font-family: $font-secondaryCursive;
+	}
 }
 .blogSubTitle {
 	@extend .blogTitle;
 	font-size: 20px;
+	@include breakpoint(medium){
+	font-family: $font-secondaryCursive;
+	}
 }
 .blogIntro {
 	margin: 30px;
@@ -144,22 +164,32 @@ ul {
 }
 
 #thirdText {
-	font-family: $font-secondaryCursive;
-	font-size: 30px;
+	font-size: 20px;
 	text-align: center;
-	line-height: 50%;
 	color: black;
 	text-decoration: none;
+	@include breakpoint(medium){
+	font-size: 30px;
+	font-family: $font-secondaryCursive;
+	line-height: 50%;
+	}
 }
 
 #thirdText2{
-	@extend #thirdText;
+	font-size: 20px;
+	text-align: center;
+	color: black;
+	text-decoration: none;
+	@include breakpoint(medium){
 	font-size: 20px;
 	text-align: right;
 	position: relative;
 	right: 25%;
 	color: black;
 	text-decoration: none;
+	font-family: $font-secondaryCursive;
+	line-height: 50%;
+	}
 }
 
 
@@ -197,6 +227,14 @@ ul {
 	width: 25%;
 	margin: 4.167%;
 	text-align: center;
+	padding-bottom: 20px;
+
+	& p{
+		display: none;
+		@include breakpoint(small){
+		display: block;
+	}
+}
 }
 
 .buttonLink {
@@ -204,14 +242,17 @@ ul {
     color: black;
     background-color: $grayColor;
     border-radius: 25px;
-    padding: 10px 24px;
-    font-family: $font-bigCursive;
     font-size: 30px;
 
     	& a {
 		color: black;
 		text-decoration: none;
-}
+
+	@include breakpoint(medium){
+		padding: 10px 24px;
+    	font-family: $font-bigCursive;
+		}
+	}
 }
 
 .buttonLink:hover {
@@ -235,6 +276,7 @@ ul {
 	url(images/bike.jpg);
 	clear: left;
 	width: 100%;
+	margin-top: 20px;
 }
 
 #socialMediaText {

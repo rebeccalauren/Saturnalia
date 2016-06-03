@@ -3,13 +3,13 @@ body {
 }
 
 .nav-ham {
-	color: black;
+	color: white;
 	text-decoration: none;
 	font-size: 50px;
 	float:right;
 
 	&:hover {
-		color: white;
+		color: orange;
 	}
 }
 nav ul {
@@ -51,7 +51,7 @@ nav {
 }
 
 
-	& .nav-secondary > li {
+	.nav-secondary > li {
 		display: none;
 		@include breakpoint(medium){
 			display:inline-block;

@@ -36,18 +36,24 @@ body {
 }
 .titleOfPage {
 	clear: both;
-	font-family: $font-bigCursive;
 	text-align: center;
 	color: white;
+	@include breakpoint(medium){
+	font-family: $font-bigCursive;
 	position: relative;
+	}
 }
+
 .plainBlogTitle {
 	@extend .titleOfPage;
-	font-size: 50px;
+	font-size: 30px;
 	padding: 0;
 	margin: 0;
 	position: relative;
+	@include breakpoint(medium){
 	right: 100px;
+	font-size: 50px;
+	}
 }
 .plainBlogSub {
 	@extend .plainBlogTitle;

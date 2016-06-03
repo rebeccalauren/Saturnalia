@@ -50,14 +50,16 @@ $("#arrowDown2").on("click", function(){
 		$(window).scrollTo(pageToScrollTo, 3000, {offset:-offset});
 	});
 
-	$(".page").hover(
-	    function(){
-	       	$(".overlay").fadeIn()
-	   },
-	   function(){
-	   		$(".overlay").fadeOut() 
+	if ($(window).width()>800){
+		$(".page").hover(
+	    	function(){
+	       		$(".overlay").fadeIn()
+	   	},
+	   		function(){
+	   			$(".overlay").fadeOut() 
 	   }
 	);
+	}
 
 	$(".js-nav").on("click", function(){
 		$("nav").slideToggle();

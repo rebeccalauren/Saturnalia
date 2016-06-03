@@ -1,3 +1,4 @@
+@include breakpoint (small){
 .hardcover_front li:first-child {
 	background-color: #eee;
 	-webkit-backface-visibility: hidden;
@@ -443,4 +444,5 @@
 	-webkit-transition-duration: 1.2s;
 	-moz-transition-duration: 1.2s;
 	transition-duration: 1.2s;
+}
 }
