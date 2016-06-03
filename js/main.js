@@ -59,6 +59,10 @@ $("#arrowDown2").on("click", function(){
 	   }
 	);
 
+	$(".js-nav").on("click", function(){
+		$("nav").slideToggle();
+	});
+
 }); // closes doc.ready
 
 // $(".poem").hover(
